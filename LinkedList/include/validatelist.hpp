@@ -33,19 +33,19 @@ void check_if_second_element_is_2(Node<int>* node) {
     printf("Success!!\n");
 }
 
-/*
-* Reference implementation:
-*
-*    Node<int>* create_list_with_two_elements(int number1, int number2) {
-*
-*        Node<int>* node1 = new Node<int>{1, nullptr};
-*        Node<int>* node2 = new Node<int>{2, nullptr};
-*
-*        node1->next = node2;
-*
-*        return node1;
-*    }
-*/
+void check_if_last_element_is_correct(Node<int>* head, int last_value) {
+    printf("%s...",__func__);
 
+    Node<int>* tmp = head;
+
+    while(tmp->next != nullptr) {
+        tmp = tmp->next;
+    }
+
+    printf("Last element of the list: %d - Expected: %d\n", tmp->data, last_value);
+    assert(last_value == tmp->data);
+    printf("Success!!\n");
+
+}
 
 #endif  //!__VALIDATELIST__H__
