@@ -4,6 +4,13 @@
 
 This exercise tries to help to understand one of the most basics data structure: the linked list.
 
+## Exercises
+
+So far we are focusing on the most basic data structure: Linked List.
+You can find two branches in this project: one for single linked list and another for double linked list.
+
+The code tries to guide you through the exercises as we explore different aspect of this data estructure. At the same time, we'll try to show some common design patters broadly used in the industry.
+
 ## Before starting the programming...
 
 **Reading**: https://en.wikipedia.org/wiki/Linked_list

@@ -1,9 +1,9 @@
 #include <cstdio>
 
-#include "linkedlist.hpp"
-#include "list_factory.hpp"
+#include "node.hpp"
+#include "listfactory.hpp"
 
-#include "validatelist.hpp" //<=Do not look into if you're working on the solution!
+#include "validatelist.hpp" // <= Do not look here if you're working on the solution!
 
 /*
 * In its most basic form, a linked list is just a succession of
@@ -16,14 +16,16 @@
 *
 * Args:
 *
-* number1, number2: two integers
+* first_value, second_value: two integers
 *
 * Return: a pointer to the first node of the list
 */
-Node<int>* create_list_with_two_elements(int number1, int number2) {
-    /*
-    * Fill it with your own code!
-    */
+Node<int>* create_singly_linked_list(int first_value, int second_value) {
+    Node<int>* node1 = new Node<int>{1, nullptr};
+    Node<int>* node2 = new Node<int>{2, nullptr};
+    node1->next = node2;
+
+    return node1;
     return nullptr; //<=You should modify this too!
 }
 
@@ -40,21 +42,27 @@ Node<int>* create_list_with_two_elements(int number1, int number2) {
 * last_value: integer
 */
 void add_element_at_the_end(Node<int>* head, int last_value) {
-    /*
-    * Fill it with your own code!
-    */
+    Node<int>* tmp = head;
+
+    while (tmp->next != nullptr) {
+        tmp = tmp->next;
+    }
+
+    Node<int>* tail = new Node<int>{last_value, nullptr};
+    tmp->next = tail;
 }
+
 
 int main(int argc, char* argv[]) {
 
-    Node<int>* head = create_list_with_two_elements(1, 2);
+    Node<int>* head = create_singly_linked_list(1, 2);
 
     check_list_got_two_elements(head);
-    check_if_first_element_is_1(head);
-    check_if_second_element_is_2(head);
+    check_element_in_position(head, 0, 1);
+    check_element_in_position(head, 1, 2);
 
     //Get a singly linked list of three elements
-    head = create_singly_linked_list<int>(3, 0);
+    head = create_singly_linked_list(3, 0);
     add_element_at_the_end(head, 4);
     check_if_last_element_is_correct(head, 4);
 

@@ -1,0 +1,18 @@
+{
+    "target" : "DoublyLinkedList",
+    "include" : "include",
+    "out" : "out",
+
+    "compiler" : "g++",
+    "ccflags" : [
+        "-std=c++17"
+    ],
+
+    "ldflags" : [
+
+    ],
+
+    "srcs" : [
+        "src/main.cpp"
+    ]
+}
