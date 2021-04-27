@@ -21,11 +21,9 @@
 * Return: a pointer to the first node of the list
 */
 Node<int>* create_singly_linked_list(int first_value, int second_value) {
-    Node<int>* node1 = new Node<int>{1, nullptr};
-    Node<int>* node2 = new Node<int>{2, nullptr};
-    node1->next = node2;
-
-    return node1;
+    /*
+    *    Fill it with your code
+    */
     return nullptr; //<=You should modify this too!
 }
 
@@ -42,14 +40,9 @@ Node<int>* create_singly_linked_list(int first_value, int second_value) {
 * last_value: integer
 */
 void add_element_at_the_end(Node<int>* head, int last_value) {
-    Node<int>* tmp = head;
-
-    while (tmp->next != nullptr) {
-        tmp = tmp->next;
-    }
-
-    Node<int>* tail = new Node<int>{last_value, nullptr};
-    tmp->next = tail;
+    /*
+    *    Fill it with your code
+    */
 }
 
 
