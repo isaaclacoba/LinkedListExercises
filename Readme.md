@@ -36,7 +36,7 @@ Good luck!!
 
 ## How to compile and run the example?
 ```
-$ cd LinkedList;
+$ cd SinglyLinkedList;
 $ python3 ../mach/mach.py build
 $ python3 ../mach/mach.py run
 ```
